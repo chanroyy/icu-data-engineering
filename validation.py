@@ -32,9 +32,11 @@ def validate_lab_data(df):
     if df["unit"].isna().any():
         raise ValueError("Missing units")
 
-    timestamps = pd.to_datetime(
-        df["measurement_time"], errors="coerce"
-    )
+   timestamps = pd.to_datetime(
+    df["measurement_time"],
+    format="ISO8601",
+    errors="coerce"
+)
 
     if timestamps.isna().any():
         raise ValueError("Invalid timestamps")

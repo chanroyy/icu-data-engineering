@@ -1,5 +1,3 @@
-
-
 \# ICU Data Engineering and Creatinine Analysis
 
 
@@ -157,6 +155,196 @@ All patient and laboratory data are synthetic.
 This project is for educational and portfolio purposes only.
 
 It is not intended for clinical decision-making.
+
+
+
+\## Installation and Setup
+
+
+
+\### Prerequisites
+
+
+
+\- Python 3
+
+\- PostgreSQL
+
+\- pgAdmin 4 (optional)
+
+\- Git
+
+
+
+\### 1. Clone the Repository
+
+
+
+```bash
+
+git clone https://github.com/codebymoon/-icu-data-engineering.git
+
+cd -icu-data-engineering
+
+```
+
+
+
+\### 2. Install Dependencies
+
+
+
+```bash
+
+python -m pip install -r requirements.txt
+
+```
+
+
+
+\### 3. Initialize the Database
+
+
+
+\- Open PostgreSQL or pgAdmin 4.
+
+\- Create a new database named `icu-research`.
+
+\- Execute `schema.sql` in the new database.
+
+\- The schema creates four relational tables, an index,
+
+&#x20; and synthetic sample records.
+
+
+
+The Python scripts use localhost, port 5432,
+
+and the PostgreSQL user postgres.
+
+
+
+Passwords are entered at runtime and are not
+
+stored in the source code.
+
+
+
+\### 4. Test Database Connectivity
+
+
+
+```bash
+
+python connect\_db.py
+
+```
+
+
+
+\### 5. Run the ETL Pipeline
+
+
+
+```bash
+
+python load\_icu\_data.py
+
+```
+
+
+
+\### 6. Run Automated Tests
+
+
+
+```bash
+
+python -m pytest -v
+
+```
+
+
+
+Expected result: five passing tests.
+
+
+
+\### 7. Run Creatinine Analysis
+
+
+
+```bash
+
+python analyze\_icu.py
+
+```
+
+
+
+\### 8. Launch the Interactive Dashboard
+
+
+
+```bash
+
+python -m streamlit run dashboard.py
+
+```
+
+
+
+Open http://localhost:8501 in your browser.
+
+
+
+\## Project Architecture
+
+
+
+PostgreSQL Database
+
+&#x20;   -> Python ETL Pipeline
+
+&#x20;   -> Automated Data Validation
+
+&#x20;   -> Exploratory Creatinine Analysis
+
+&#x20;   -> Interactive Streamlit Dashboard
+
+
+
+\## Database Administration
+
+
+
+The project includes practical exercises in:
+
+
+
+\- Database backup and restoration
+
+\- Relational database design
+
+\- Composite indexing
+
+\- SQL query execution plan analysis
+
+\- Duplicate-safe data loading
+
+
+
+\## Limitations and Future Improvements
+
+
+
+\- The dataset is synthetic and deliberately small.
+
+\- Threshold-based flags are not clinical diagnoses.
+
+\- Future extensions could include larger datasets,
+
+&#x20; machine learning models, and additional validation rules.
 
 
 

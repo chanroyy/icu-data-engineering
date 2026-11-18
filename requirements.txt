@@ -1,0 +1,7 @@
+
+pandas
+numpy
+sqlalchemy
+psycopg[binary]
+streamlit
+pytest
