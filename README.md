@@ -1,6 +1,8 @@
 \# ICU Data Engineering and Creatinine Analysis
 
+## Technical Report
 
+[Read the full technical report (PDF)](report/ICU_Technical_Report.pdf)
 
 \## Project Overview
 
