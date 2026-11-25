@@ -182,7 +182,7 @@ It is not intended for clinical decision-making.
 
 ```bash
 
-git clone https://github.com/codebymoon/-icu-data-engineering.git
+git clone https://github.com/chanroyy/icu-data-engineering.git
 
 cd -icu-data-engineering
 
